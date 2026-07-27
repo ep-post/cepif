@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anti-Trafficking — CEPI Foundation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.focus-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:24px; margin-top:48px; }
+.focus-card { padding:30px 28px; border:1px solid var(--border); background:var(--white); border-radius:2px; }
+.focus-card h4 { font-family:"Manrope",sans-serif; font-size:0.95rem; font-weight:700; margin-bottom:8px; }
+.focus-card p { font-size:0.85rem; color:var(--mid); line-height:1.65; }
+
+.approach-row { padding:32px 0; border-top:1px solid var(--border); display:grid; grid-template-columns:200px 1fr; gap:32px; }
+.approach-row:last-child { border-bottom:1px solid var(--border); }
+.approach-label { font-family:"Manrope",sans-serif; font-size:0.8rem; font-weight:700; color:var(--red); }
+.approach-text { font-size:0.9rem; color:var(--mid); line-height:1.7; }
+
+.nav-pills { display:flex; gap:12px; flex-wrap:wrap; margin-top:32px; }
+.nav-pill { padding:8px 16px; border:1px solid rgba(255,255,255,0.15); border-radius:100px; font-size:0.8rem; font-weight:600; color:rgba(255,255,255,0.55); text-decoration:none; font-family:"Manrope",sans-serif; transition:all 0.2s; }
+.nav-pill:hover { background:var(--white); color:var(--charcoal); border-color:var(--white); }
+
+/* Two trafficking type cards side by side */
+.type-split { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:56px; }
+.type-card { padding:44px 40px; border:2px solid var(--border); }
+.type-card.dark { background:var(--charcoal); border-color:var(--charcoal); }
+.type-num { font-family:"Manrope",sans-serif; font-size:0.7rem; font-weight:700; letter-spacing:0.14em; text-transform:uppercase; margin-bottom:14px; }
+.type-card:not(.dark) .type-num { color:var(--red); }
+.type-card.dark .type-num { color:rgba(255,255,255,0.3); }
+.type-card h3 { font-family:"Manrope",sans-serif; font-size:1.2rem; font-weight:700; letter-spacing:-0.02em; margin-bottom:14px; }
+.type-card:not(.dark) h3 { color:var(--charcoal); }
+.type-card.dark h3 { color:var(--white); }
+.type-card p { font-size:0.88rem; line-height:1.75; }
+.type-card:not(.dark) p { color:var(--mid); }
+.type-card.dark p { color:rgba(255,255,255,0.5); }
+.type-card ul { margin-top:16px; padding-left:0; list-style:none; }
+.type-card ul li { font-size:0.84rem; line-height:1.65; padding:6px 0; border-bottom:1px solid; display:flex; gap:10px; }
+.type-card:not(.dark) ul li { border-color:var(--border); color:var(--mid); }
+.type-card.dark ul li { border-color:rgba(255,255,255,0.07); color:rgba(255,255,255,0.45); }
+.type-card ul li::before { content:"→"; color:var(--red); flex-shrink:0; }
+
+.warning-box { background:#FAE8E7; border-left:4px solid var(--red); padding:24px 28px; border-radius:0 2px 2px 0; margin-top:40px; }
+.warning-box p { font-size:0.88rem; line-height:1.7; color:var(--charcoal); }
+.warning-box strong { font-family:"Manrope",sans-serif; }
+
+@media(max-width:768px){
+  .type-split { grid-template-columns:1fr; }
+  .approach-row { grid-template-columns:1fr; gap:10px; }
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="arc-bg" aria-hidden="true">
+    <svg viewBox="0 0 700 700" fill="none"><path d="M620 50 A320 320 0 1 0 620 650" stroke="white" stroke-width="2"/><path d="M580 90 A280 280 0 1 0 580 610" stroke="white" stroke-width="1.6"/><path d="M540 130 A240 240 0 1 0 540 570" stroke="white" stroke-width="1.2"/></svg>
+  </div>
+  <div class="section-label">Program Pillar 06</div>
+  <h1>🔒 Anti-Trafficking</h1>
+  <p class="hero-sub">Addressing two overlapping and rapidly evolving forms of trafficking — international labour trafficking through fraudulent overseas recruitment, and trafficking for forced criminality in cyber-scam compounds — both of which disproportionately affect workers from India's high-migration source states.</p>
+  <div class="nav-pills">
+    <a href="p-migrant-workers.html" class="nav-pill">← Migrant Workers</a>
+    <a href="research.html" class="nav-pill">Research →</a>
+    <a href="p-partnerships.html" class="nav-pill">Partnerships →</a>
+  </div>
+</div>
+
+<!-- TWO TRAFFICKING TYPES -->
+<section>
+  <div class="section-label">Two Trafficking Contexts</div>
+  <h2>What this pillar addresses</h2>
+  <div class="type-split fade-up">
+    <div class="type-card">
+      <div class="type-num">Type 01</div>
+      <h3>International Labour Trafficking</h3>
+      <p>Workers from India — particularly from Haryana, Punjab, Bihar, and Jharkhand — are recruited through fraudulent job offers for construction, manufacturing, IT, and hospitality work in the Gulf, Southeast Asia, and beyond. Legitimate-seeming agencies, social media advertisements, and community-based recruiters deceive workers about wages, conditions, and the nature of the work. Upon arrival, workers find their documents confiscated, their freedom of movement restricted, and their ability to return home made financially or physically impossible.</p>
+      <ul>
+        <li>Fraudulent overseas recruitment via fake agencies and social media</li>
+        <li>Document confiscation and debt bondage at destination</li>
+        <li>"Donkey route" irregular migration used to bypass checks</li>
+        <li>Workers from Haryana, Punjab, Bihar, Jharkhand disproportionately affected</li>
+        <li>Gulf, Southeast Asia, and Eastern Europe as primary destination regions</li>
+      </ul>
+    </div>
+    <div class="type-card dark">
+      <div class="type-num">Type 02</div>
+      <h3>Trafficking for Forced Criminality</h3>
+      <p>A rapidly growing and severely under-documented form of trafficking: workers are recruited — again through fraudulent job offers — and trafficked into cyber-scam compounds, primarily in Southeast Asia (Myanmar, Cambodia, Laos, and the Philippines), where they are compelled under threat of violence to operate online fraud operations targeting victims in India and globally. This form of trafficking is explicitly recognised by the UNODC as a distinct and growing exploitation type, and is the focus of the UN's World Day Against Trafficking in Persons 2026 theme.</p>
+      <ul>
+        <li>Recruitment via fake IT, data-entry, and customer-service job offers</li>
+        <li>Confinement in compound facilities, often with armed guards</li>
+        <li>Forced to conduct cryptocurrency fraud, romance scams, and investment fraud</li>
+        <li>Victims criminalised rather than identified as trafficking survivors</li>
+        <li>Myanmar, Cambodia, Laos, Philippines as primary compound locations</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="warning-box fade-up">
+    <p><strong>Why these two forms are treated together:</strong> Both share the same foundational recruitment mechanism — deception through a false promise of legitimate work. The distinction lies in what workers are trafficked <em>for</em>: coerced labour in one case, coerced criminal activity in the other. Effective prevention, identification, and survivor support must address both, and the same source communities face risk from both types simultaneously.</p>
+  </div>
+</section>
+
+<!-- FOCUS AREAS -->
+<section class="white-section">
+  <div class="section-label">Focus Areas</div>
+  <h2>What we do in this pillar</h2>
+  <div class="focus-grid fade-up">
+    <div class="focus-card">
+      <h4>Prevention &amp; Awareness</h4>
+      <p>Community-level campaigns in source states that help workers and families recognise fraudulent recruitment — including how to verify overseas job offers, what warning signs look like, and where to report suspicious recruiters.</p>
+    </div>
+    <div class="focus-card">
+      <h4>Survivor Identification</h4>
+      <p>Building the capacity of frontline workers, police, and consular officials to correctly identify trafficking survivors — including those returning from scam compounds, who are often treated as criminals rather than victims.</p>
+    </div>
+    <div class="focus-card">
+      <h4>Rehabilitation &amp; Reintegration</h4>
+      <p>Supporting survivors' return — addressing the national policy gap for overseas trafficking returnees, debt burden, psychosocial trauma, legal aid needs, and sustainable livelihood restoration in source communities.</p>
+    </div>
+    <div class="focus-card">
+      <h4>Policy Advocacy</h4>
+      <p>Engaging with the Ministry of External Affairs, eMigrate system regulators, state labour departments, and international bodies (IOM, UNODC) to strengthen pre-departure safeguards, bilateral agreements, and survivor protections.</p>
+    </div>
+    <div class="focus-card">
+      <h4>Research &amp; Documentation</h4>
+      <p>Generating primary evidence on recruitment routes, trafficker methods, survivor profiles, and gaps in the legal and policy response — including corridor-specific studies covering Haryana, Punjab, Bihar, Jharkhand, Assam, and West Bengal.</p>
+    </div>
+    <div class="focus-card">
+      <h4>Capacity Building</h4>
+      <p>Training for frontline NGO workers, police, prosecutors, and social workers on the psychology of trafficking, trafficker tactics, trauma-informed survivor support, and the legal framework under the IPC, ITPA, and emerging legislation.</p>
+    </div>
+  </div>
+</section>
+
+<!-- APPROACH -->
+<section>
+  <div class="section-label">Our Approach</div>
+  <h2>How we work in anti-trafficking</h2>
+  <div style="margin-top:48px;" class="fade-up">
+    <div class="approach-row">
+      <div class="approach-label">Trafficker-Centred Framing</div>
+      <div class="approach-text">We centre trafficker agency in all analysis, advocacy, and communications — refusing framings that inadvertently place responsibility on survivors or their families. Exploitation is a crime committed by traffickers, not a transaction entered into by victims.</div>
+    </div>
+    <div class="approach-row">
+      <div class="approach-label">Source-State Focus</div>
+      <div class="approach-text">Our work is grounded in the source geographies — Haryana, Punjab, Bihar, Jharkhand, Assam, and West Bengal — where prevention is possible and where survivors return. We work with communities, local government, and frontline organisations in these states.</div>
+    </div>
+    <div class="approach-row">
+      <div class="approach-label">Evidence-Based Advocacy</div>
+      <div class="approach-text">We submit to UN bodies, engage Special Rapporteurs, and produce policy notes grounded in field-level evidence — connecting India's specific migration and trafficking realities to the international normative framework.</div>
+    </div>
+    <div class="approach-row">
+      <div class="approach-label">Survivor-Led Programming</div>
+      <div class="approach-text">Survivors of trafficking are rights-holders, experts by experience, and — where they choose to be — advocates. Our programming creates space for survivor voice in policy engagement and programme design, never as tokenism.</div>
+    </div>
+    <div class="approach-row">
+      <div class="approach-label">Ecosystem Collaboration</div>
+      <div class="approach-text">Trafficking cannot be addressed by one organisation. We work alongside Empower People's direct service programs, government anti-trafficking units, consular services, IOM, UNODC, and civil society coalitions.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCE STATES -->
+<section class="dark-section">
+  <div class="section-label">Geographic Focus</div>
+  <h2>Source states we work in</h2>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;" class="fade-up">
+    <div style="padding:28px;border:1px solid rgba(255,255,255,0.08);border-radius:2px;">
+      <h4 style="font-family:'Manrope',sans-serif;font-weight:700;color:var(--white);margin-bottom:8px;">Haryana &amp; Punjab</h4>
+      <p style="font-size:0.83rem;color:rgba(255,255,255,0.4);line-height:1.65;">Primary source for international labour trafficking and trafficking for forced criminality via fraudulent overseas job offers. Workers from these states have been documented in scam compounds across Southeast Asia.</p>
+    </div>
+    <div style="padding:28px;border:1px solid rgba(255,255,255,0.08);border-radius:2px;">
+      <h4 style="font-family:'Manrope',sans-serif;font-weight:700;color:var(--white);margin-bottom:8px;">Bihar &amp; Jharkhand</h4>
+      <p style="font-size:0.83rem;color:rgba(255,255,255,0.4);line-height:1.65;">High-volume source states for labour trafficking internationally, and for child and youth trafficking into domestic servitude via illegal placement agencies in Delhi-NCR. Jharkhand's Khunti and Ranchi districts are particularly documented.</p>
+    </div>
+    <div style="padding:28px;border:1px solid rgba(255,255,255,0.08);border-radius:2px;">
+      <h4 style="font-family:'Manrope',sans-serif;font-weight:700;color:var(--white);margin-bottom:8px;">Assam &amp; West Bengal</h4>
+      <p style="font-size:0.83rem;color:rgba(255,255,255,0.4);line-height:1.65;">Source states for bride trafficking, sex trafficking, and domestic servitude, with a cross-border dimension involving Bangladesh. The deception-then-confinement recruitment mechanism mirrors trafficking-for-forced-criminality patterns.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="white-section">
+  <div class="section-label">Get Involved</div>
+  <h2>Support anti-trafficking work</h2>
+  <p class="section-intro">This pillar is open for CSR partnerships, institutional funding, research collaboration, and training commissions. Write to us to explore how to contribute.</p>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;margin-top:32px;">
+    <a href="contact.html" class="btn-primary">Contact Us <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="partner.html" class="btn-ghost">Partnership Models</a>
+  </div>
+</section>
+
+<script src="components.js"></script>
+<script>renderNav('programs'); renderFooter();</script>
+</body>
+</html>

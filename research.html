@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — CEPI Foundation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.research-themes { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:56px; }
+.theme-card { padding:40px 36px; background:var(--white); border:2px solid var(--border); }
+.theme-card h3 { font-family:'Manrope',sans-serif; font-size:1.05rem; font-weight:700; margin-bottom:10px; }
+.theme-card p { font-size:0.87rem; color:var(--mid); line-height:1.7; }
+.theme-icon { font-size:1.4rem; margin-bottom:16px; }
+.method-list { margin-top:48px; }
+.method-row { padding:28px 0; border-top:1px solid var(--border); display:flex; gap:32px; align-items:start; }
+.method-row:last-child { border-bottom:1px solid var(--border); }
+.method-label { font-family:'Manrope',sans-serif; font-size:0.78rem; font-weight:700; color:var(--red); min-width:180px; }
+.method-text { font-size:0.88rem; color:var(--mid); line-height:1.7; }
+.collab-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-top:48px; }
+.collab-card { padding:28px; border:1px solid rgba(255,255,255,0.08); border-radius:2px; }
+.collab-card h4 { font-family:'Manrope',sans-serif; font-size:0.9rem; font-weight:700; color:var(--white); margin-bottom:8px; }
+.collab-card p { font-size:0.83rem; color:rgba(255,255,255,0.4); line-height:1.65; }
+@media(max-width:768px){ .research-themes{grid-template-columns:1fr;} .collab-grid{grid-template-columns:1fr 1fr;} .method-row{flex-direction:column;gap:10px;} }
+@media(max-width:480px){ .collab-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="page-hero">
+  <div class="arc-bg" aria-hidden="true"><svg viewBox="0 0 700 700" fill="none"><path d="M620 50 A320 320 0 1 0 620 650" stroke="white" stroke-width="2"/><path d="M580 90 A280 280 0 1 0 580 610" stroke="white" stroke-width="1.6"/></svg></div>
+  <div class="section-label">Research</div>
+  <h1>Evidence for<br>systems change.</h1>
+  <p class="hero-sub">CEPI Foundation generates primary research on migration, labour markets, and social exclusion — designed to inform policy, programs, and advocacy, not just academic archives.</p>
+</div>
+
+<section>
+  <div class="section-label">Research Themes</div>
+  <h2>What we study</h2>
+  <div class="research-themes fade-up">
+    <div class="theme-card"><div class="theme-icon">🗺️</div><h3>Internal Migration in India</h3><p>Primary research on migration patterns, corridors, push and pull factors, and the lived experiences of workers — generating data that is currently absent from public policy discourse.</p></div>
+    <div class="theme-card"><div class="theme-icon">⚖️</div><h3>Labour Market Analysis</h3><p>Analysis of informal labour markets, wage structures, working conditions, and employer practices — providing evidence for policy reform and industry engagement.</p></div>
+    <div class="theme-card"><div class="theme-icon">🧒</div><h3>Children &amp; Education</h3><p>Research on education outcomes for children in migrant households — documenting the specific barriers to continuity and the conditions under which children thrive despite migration.</p></div>
+    <div class="theme-card"><div class="theme-icon">📱</div><h3>Technology &amp; Digital Inclusion</h3><p>Testing and evaluating digital tools for worker registration, service delivery, and scheme access in low-connectivity, low-literacy field contexts.</p></div>
+    <div class="theme-card" style="grid-column:1/-1;"><div class="theme-icon">🏛️</div><h3>Policy &amp; Governance</h3><p>Analysis of existing migration governance frameworks, scheme portability, inter-state coordination mechanisms, and gaps in implementation — to support evidence-based advocacy with state and central government.</p></div>
+  </div>
+</section>
+
+<section class="white-section">
+  <div class="section-label">Methodology</div>
+  <h2>How we conduct research</h2>
+  <div class="method-list fade-up">
+    <div class="method-row"><div class="method-label">Participatory Research</div><div class="method-text">We prioritise methods that centre the voice of migrant workers — FGDs, in-depth interviews, and community-based data collection — rather than purely extractive approaches.</div></div>
+    <div class="method-row"><div class="method-label">Mixed Methods</div><div class="method-text">We combine quantitative surveys with qualitative fieldwork to produce findings that are both statistically grounded and contextually rich.</div></div>
+    <div class="method-row"><div class="method-label">Action Research</div><div class="method-text">We embed research within our program work — treating implementation as a learning process and documenting what we discover along the way.</div></div>
+    <div class="method-row"><div class="method-label">Open Access</div><div class="method-text">We publish findings openly wherever possible to contribute to the shared knowledge base on internal migration in India.</div></div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="section-label">Research Collaboration</div>
+  <h2>Work with us on research</h2>
+  <div class="collab-grid fade-up">
+    <div class="collab-card"><h4>Academic Institutions</h4><p>We welcome collaborative research partnerships with universities and research institutions working on migration, labour, or social policy.</p></div>
+    <div class="collab-card"><h4>Policy Bodies</h4><p>We accept commissioned research from government bodies, think tanks, and international organisations seeking evidence on India's internal migration landscape.</p></div>
+    <div class="collab-card"><h4>Funders</h4><p>Foundations and CSR teams can commission research aligned with our focus areas — with full methodology transparency and open publication rights.</p></div>
+  </div>
+  <a href="contact.html" class="btn-light" style="margin-top:40px;">Propose a Research Collaboration →</a>
+</section>
+
+<script src="components.js"></script>
+<script>renderNav('research'); renderFooter();</script>
+</body>
+</html>

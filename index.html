@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEPI Foundation — Catalysing Empower People Initiatives</title>
+<link rel="stylesheet" href="style.css">
+<style>
+/* HOME-SPECIFIC */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center;
+  padding: 100px 5vw 80px;
+  position: relative; overflow: hidden;
+}
+
+.hero-arc-bg {
+  position: absolute; right: -6vw; top: 50%;
+  transform: translateY(-50%);
+  width: 58vw; max-width: 680px;
+  opacity: 0.07; pointer-events: none;
+}
+
+.hero-content { max-width: 680px; position: relative; z-index: 2; }
+
+.hero-sub {
+  font-size: 1.1rem; line-height: 1.75;
+  color: var(--mid); max-width: 520px; margin-bottom: 40px;
+}
+
+.hero-stats {
+  margin-top: 64px; display: flex; gap: 0;
+  border-top: 1px solid var(--border); padding-top: 36px;
+}
+
+.stat { flex: 1; padding-right: 36px; border-right: 1px solid var(--border); margin-right: 36px; }
+.stat:last-child { border-right: none; margin-right: 0; padding-right: 0; }
+
+.stat-num {
+  font-family: 'Manrope', sans-serif;
+  font-size: 2rem; font-weight: 800;
+  letter-spacing: -0.03em; color: var(--charcoal);
+}
+.stat-num sup { font-size: 0.95rem; color: var(--red); }
+.stat-label { font-size: 0.78rem; color: var(--light); letter-spacing: 0.04em; text-transform: uppercase; font-weight: 500; margin-top: 2px; }
+
+/* VM SECTION */
+.vm-section { background: var(--charcoal); }
+.vm-grid {
+  display: grid; grid-template-columns: 1fr 1px 1fr;
+  gap: 0 56px; margin-top: 52px; align-items: start;
+}
+.vm-divider { background: rgba(255,255,255,0.1); }
+.vm-tag { font-family: 'Manrope', sans-serif; font-size: 0.7rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--red); margin-bottom: 16px; }
+.vm-block h3 { font-family: 'Manrope', sans-serif; font-size: clamp(1.1rem,1.8vw,1.45rem); font-weight: 700; line-height: 1.35; letter-spacing: -0.02em; color: var(--white); }
+
+/* PROGRAMS PREVIEW */
+.programs-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(280px,1fr));
+  gap: 2px; margin-top: 56px;
+  border: 2px solid var(--border);
+}
+
+.program-card {
+  background: var(--cream);
+  padding: 36px 32px;
+  border-right: 2px solid var(--border);
+  border-bottom: 2px solid var(--border);
+  transition: background 0.25s;
+  text-decoration: none; color: inherit;
+  display: block;
+}
+.program-card:hover { background: var(--white); }
+.program-icon { width: 40px; height: 40px; border-radius: 50%; background: var(--charcoal); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; font-size: 1.1rem; }
+.program-card h3 { margin-bottom: 10px; }
+.program-card p { font-size: 0.86rem; color: var(--mid); line-height: 1.65; margin-bottom: 16px; }
+.program-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.arrow-link { font-family: 'Manrope', sans-serif; font-size: 0.8rem; font-weight: 700; color: var(--red); letter-spacing: 0.04em; }
+
+/* AREAS */
+.area-row {
+  display: grid; grid-template-columns: 40px 1fr 2fr;
+  gap: 0 44px; padding: 36px 0;
+  border-top: 1px solid var(--border); align-items: start;
+}
+.area-row:last-child { border-bottom: 1px solid var(--border); }
+.area-num { font-family: 'Manrope', sans-serif; font-size: 0.72rem; font-weight: 700; color: var(--red); letter-spacing: 0.06em; padding-top: 3px; }
+.area-title { font-family: 'Manrope', sans-serif; font-size: 1.1rem; font-weight: 700; letter-spacing: -0.01em; }
+.area-desc { font-size: 0.88rem; color: var(--mid); line-height: 1.7; }
+
+/* REG */
+.reg-strip { background: var(--cream); border-top: 1px solid var(--border); }
+.reg-grid { display: flex; gap: 56px; flex-wrap: wrap; margin-top: 40px; align-items: flex-start; }
+.reg-block h3 { font-family: 'Manrope', sans-serif; font-size: 0.68rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--light); margin-bottom: 6px; }
+.reg-block p { font-family: 'Manrope', sans-serif; font-size: 0.95rem; font-weight: 600; color: var(--charcoal); }
+
+/* CONTACT CTA */
+.contact-cta { background: var(--charcoal); }
+.contact-cta h2 { color: var(--white); }
+.contact-cta .section-intro { color: rgba(255,255,255,0.5); }
+.contact-cta-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+
+@media (max-width: 768px) {
+  .hero { padding: 88px 4vw 64px; }
+  .hero-arc-bg { right: -20vw; width: 90vw; opacity: 0.04; }
+  .hero-stats { flex-direction: column; gap: 20px; }
+  .stat { border-right: none; margin-right: 0; padding-right: 0; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+  .stat:last-child { border-bottom: none; }
+  .vm-grid { grid-template-columns: 1fr; gap: 40px; }
+  .vm-divider { display: none; }
+  .area-row { grid-template-columns: 32px 1fr; }
+  .area-desc { grid-column: 2; margin-top: 8px; }
+  .contact-cta-inner { grid-template-columns: 1fr; gap: 40px; }
+}
+</style>
+</head>
+<body>
+
+<!-- nav injected by JS -->
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-arc-bg" aria-hidden="true">
+    <svg viewBox="0 0 700 700" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M620 50 A320 320 0 1 0 620 650" stroke="#1C1C1C" stroke-width="2"/>
+      <path d="M580 90 A280 280 0 1 0 580 610" stroke="#1C1C1C" stroke-width="1.8"/>
+      <path d="M540 130 A240 240 0 1 0 540 570" stroke="#1C1C1C" stroke-width="1.6"/>
+      <path d="M500 168 A200 200 0 1 0 500 532" stroke="#1C1C1C" stroke-width="1.4"/>
+      <path d="M462 204 A162 162 0 1 0 462 496" stroke="#1C1C1C" stroke-width="1.2"/>
+      <path d="M426 238 A126 126 0 1 0 426 462" stroke="#1C1C1C" stroke-width="1"/>
+      <path d="M392 270 A92 92 0 1 0 392 430" stroke="#1C1C1C" stroke-width="0.8"/>
+    </svg>
+  </div>
+  <div class="hero-content fade-up">
+    <div class="eyebrow">Section 8 · 12A · 80G Certified</div>
+    <h1>Dignity and opportunity for every <span style="color:var(--red)">migrant worker</span></h1>
+    <p class="hero-sub">CEPI Foundation catalyses innovative solutions that improve economic mobility, educational outcomes, and wellbeing for migrant workers and their families across India.</p>
+    <div>
+      <a href="programs.html" class="btn-primary">Explore Programs <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <a href="partner.html" class="btn-ghost">Partner with us</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <div class="stat-num">6<sup>+</sup></div>
+        <div class="stat-label">Program Pillars</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">CSR</div>
+        <div class="stat-label">Partnership Ready</div>
+      </div>
+      <div class="stat">
+        <div class="stat-num">80G</div>
+        <div class="stat-label">Tax Exempted Donations</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VISION / MISSION -->
+<section class="vm-section">
+  <div class="section-label" style="color:rgba(255,255,255,0.3)">Who We Are</div>
+  <h2 style="color:var(--white); max-width:580px;">Movement should never mean <span style="color:var(--red)">exclusion.</span></h2>
+  <div class="vm-grid fade-up">
+    <div class="vm-block">
+      <div class="vm-tag">Vision</div>
+      <h3>A society where migrant workers and their families have equitable access to opportunity, education, dignity, and social inclusion.</h3>
+    </div>
+    <div class="vm-divider"></div>
+    <div class="vm-block">
+      <div class="vm-tag">Mission</div>
+      <h3>To catalyse innovative solutions that improve economic mobility, educational outcomes, and wellbeing for migrant workers and their families.</h3>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS PREVIEW -->
+<section>
+  <div class="section-label">Program Pillars</div>
+  <h2>Six pillars. One purpose.</h2>
+  <p class="section-intro">Each pillar addresses a distinct dimension of the migrant experience — from safe movement and anti-trafficking to children's futures, skills, research, and partnerships.</p>
+  <div class="programs-grid fade-up">
+    <a href="p-migrant-workers.html" class="program-card">
+      <div class="program-icon">🧳</div>
+      <h3>Migrant Workers</h3>
+      <p>Safe migration, worker wellbeing, financial inclusion, and access to government schemes.</p>
+      <div class="program-tags"><span class="tag tag-red">Safe Migration</span><span class="tag">Wellbeing</span><span class="tag">Financial Inclusion</span></div>
+    </a>
+    <a href="p-children.html" class="program-card">
+      <div class="program-icon">📚</div>
+      <h3>Children of Migrant Workers</h3>
+      <p>Education continuity, learning support, child protection, and digital access for children left behind.</p>
+      <div class="program-tags"><span class="tag tag-red">Education</span><span class="tag">Child Protection</span><span class="tag">Digital Learning</span></div>
+    </a>
+    <a href="p-skills.html" class="program-card">
+      <div class="program-icon">⚙️</div>
+      <h3>Skills &amp; Employability</h3>
+      <p>Workforce readiness, career pathways, and youth employment initiatives.</p>
+      <div class="program-tags"><span class="tag tag-red">Workforce</span><span class="tag">Career Pathways</span><span class="tag">Youth</span></div>
+    </a>
+    <a href="p-research.html" class="program-card">
+      <div class="program-icon">🔬</div>
+      <h3>Research &amp; Innovation</h3>
+      <p>Migration studies, labour market research, and technology solutions.</p>
+      <div class="program-tags"><span class="tag tag-red">Research</span><span class="tag">Labour Markets</span><span class="tag">Technology</span></div>
+    </a>
+    <a href="p-partnerships.html" class="program-card">
+      <div class="program-icon">🤝</div>
+      <h3>Partnerships &amp; Capacity</h3>
+      <p>CSR engagement, NGO strengthening, and government collaboration.</p>
+      <div class="program-tags"><span class="tag tag-red">CSR</span><span class="tag">NGO Strengthening</span><span class="tag">Government</span></div>
+    </a>
+    <a href="p-anti-trafficking.html" class="program-card">
+      <div class="program-icon">🔒</div>
+      <h3>Anti-Trafficking</h3>
+      <p>International labour trafficking and trafficking for forced criminality in cyber-scam compounds — prevention, survivor support, and policy advocacy.</p>
+      <div class="program-tags"><span class="tag tag-red">Labour Trafficking</span><span class="tag">Forced Criminality</span><span class="tag">Survivor Support</span></div>
+    </a>
+  </div>
+</section>
+
+<!-- AREAS -->
+<section class="white-section">
+  <div class="section-label">Our Areas of Work</div>
+  <h2>Where we focus.</h2>
+  <div class="fade-up" style="margin-top:52px;">
+    <div class="area-row"><div class="area-num">01</div><div class="area-title">Safe Migration &amp; Worker Wellbeing</div><div class="area-desc">Supporting migrant workers through access to information, services, and opportunities before, during, and after migration.</div></div>
+    <div class="area-row"><div class="area-num">02</div><div class="area-title">Children of Migrant Workers</div><div class="area-desc">Promoting education continuity, learning support, and child wellbeing for children separated from migrating parents.</div></div>
+    <div class="area-row"><div class="area-num">03</div><div class="area-title">Skills &amp; Employability</div><div class="area-desc">Creating pathways to decent work and economic advancement through skilling and industry partnerships.</div></div>
+    <div class="area-row"><div class="area-num">04</div><div class="area-title">Research &amp; Innovation</div><div class="area-desc">Generating evidence and testing scalable solutions for migration governance and labour market gaps.</div></div>
+    <div class="area-row"><div class="area-num">05</div><div class="area-title">Partnerships &amp; Capacity Building</div><div class="area-desc">Mobilising governments, employers, CSR partners, and civil society for systemic change.</div></div>
+  </div>
+</section>
+
+<!-- REGISTRATION -->
+<section class="reg-strip">
+  <div class="section-label">Legal &amp; Compliance</div>
+  <div class="reg-grid fade-up">
+    <div class="reg-block"><h3>CIN</h3><p>U85499DL2024NPL429997</p></div>
+    <div class="reg-block"><h3>Type</h3><p>Section 8 Company</p></div>
+    <div class="reg-block"><h3>Income Tax</h3><p>12A Registered</p></div>
+    <div class="reg-block"><h3>Donor Benefit</h3><p>80G Registered</p></div>
+    <div class="reg-block"><h3>Incorporated</h3><p>2024, New Delhi</p></div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="contact-cta">
+  <div class="contact-cta-inner">
+    <div>
+      <div class="section-label">Get Involved</div>
+      <h2>Partner, fund, or collaborate.</h2>
+      <p class="section-intro">Whether you are a CSR team, a foundation, a government body, or an NGO — there is a role for you in catalysing change.</p>
+      <a href="contact.html" class="btn-light" style="margin-top:28px;">Write to us <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    </div>
+    <div style="color:rgba(255,255,255,0.5); font-size:0.88rem; line-height:1.8;">
+      <p style="color:rgba(255,255,255,0.25); font-size:0.7rem; letter-spacing:0.12em; text-transform:uppercase; font-family:'Manrope',sans-serif; font-weight:700; margin-bottom:12px;">Office</p>
+      <p>Shop No. 1, Ground Floor, CSC Market<br>Pocket-M, Sarita Vihar, South Delhi<br>New Delhi — 110076</p>
+      <p style="margin-top:24px;"><a href="mailto:cepifoundation@outlook.in" style="color:var(--red); text-decoration:none;">cepifoundation@outlook.in</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- footer injected by JS -->
+
+<script src="components.js"></script>
+<script>renderNav('home'); renderFooter();</script>
+</body>
+</html>

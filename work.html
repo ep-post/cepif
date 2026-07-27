@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work — CEPI Foundation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.work-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:56px; }
+.work-card { padding:44px 40px; background:var(--white); border:2px solid var(--border); }
+.work-card h3 { font-family:'Manrope',sans-serif; font-size:1.15rem; font-weight:700; margin-bottom:12px; }
+.work-card p { font-size:0.88rem; color:var(--mid); line-height:1.7; }
+.work-num { font-family:'Manrope',sans-serif; font-size:2rem; font-weight:800; color:var(--border); letter-spacing:-0.04em; margin-bottom:16px; }
+.geo-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:20px; margin-top:48px; }
+.geo-card { padding:28px 24px; background:var(--charcoal); color:var(--white); border-radius:2px; }
+.geo-card h4 { font-family:'Manrope',sans-serif; font-weight:700; font-size:1rem; margin-bottom:6px; }
+.geo-card p { font-size:0.82rem; color:rgba(255,255,255,0.5); line-height:1.6; }
+@media(max-width:768px){ .work-grid{grid-template-columns:1fr;} .geo-grid{grid-template-columns:1fr 1fr;} }
+@media(max-width:480px){ .geo-grid{grid-template-columns:1fr;} }
+</style>
+</head>
+<body>
+<div class="page-hero">
+  <div class="arc-bg" aria-hidden="true"><svg viewBox="0 0 700 700" fill="none"><path d="M620 50 A320 320 0 1 0 620 650" stroke="white" stroke-width="2"/><path d="M580 90 A280 280 0 1 0 580 610" stroke="white" stroke-width="1.6"/><path d="M540 130 A240 240 0 1 0 540 570" stroke="white" stroke-width="1.2"/></svg></div>
+  <div class="section-label">Our Work</div>
+  <h1>Where we work<br>and how.</h1>
+  <p class="hero-sub">CEPI Foundation works at the intersection of research, programs, and systems — to create change that outlasts any single intervention.</p>
+</div>
+
+<section>
+  <div class="section-label">What We Do</div>
+  <h2>Five areas of active work</h2>
+  <div class="work-grid fade-up">
+    <div class="work-card"><div class="work-num">01</div><h3>Safe Migration &amp; Worker Wellbeing</h3><p>We support migrant workers through access to information, services, and opportunities — before migration, at destination, and on return. This includes helplines, worker resource centres, and community-based information campaigns on rights and entitlements.</p></div>
+    <div class="work-card"><div class="work-num">02</div><h3>Children of Migrant Workers</h3><p>We promote education continuity and child wellbeing for children in migrant households — whether left behind in source communities or moving with families. Our work spans school enrollment, learning support, child protection systems, and digital access.</p></div>
+    <div class="work-card"><div class="work-num">03</div><h3>Skills &amp; Employability</h3><p>We create pathways to decent work through demand-led skilling programs, recognition of prior learning, and employer linkages. We focus on workers transitioning from informal to formal labour markets, with particular attention to gender equity.</p></div>
+    <div class="work-card"><div class="work-num">04</div><h3>Research &amp; Innovation</h3><p>We generate evidence on migration patterns, labour markets, and social exclusion — through primary research, corridor studies, and technology pilots. Our research is designed to be actionable: formatted for governments, funders, and practitioners, not just archives.</p></div>
+    <div class="work-card" style="grid-column:1/-1;"><div class="work-num">05</div><h3>Partnerships &amp; Capacity Building</h3><p>We mobilise governments, employers, CSR partners, and civil society to work together — and invest in the capacity of frontline organisations doing critical work. Our partnership work includes CSR program design, NGO mentoring, and multi-stakeholder platform convening.</p></div>
+  </div>
+</section>
+
+<section class="white-section">
+  <div class="section-label">Geographic Presence</div>
+  <h2>Where we operate</h2>
+  <p class="section-intro">Our work spans key migration corridors — from source communities in Bihar and Assam to destination states in north India.</p>
+  <div class="geo-grid fade-up">
+    <div class="geo-card"><h4>New Delhi</h4><p>Headquarters and primary urban programme operations. Key destination for migrant workers from multiple states.</p></div>
+    <div class="geo-card"><h4>Haryana</h4><p>Major industrial destination zone. Construction, manufacturing, and domestic worker corridors.</p></div>
+    <div class="geo-card"><h4>Bihar</h4><p>High-volume source state. Source community programs, safe migration, and children's education work.</p></div>
+    <div class="geo-card"><h4>Assam</h4><p>Source community programs for workers migrating to Delhi NCR and other urban centres.</p></div>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="section-label">Our Approach</div>
+  <h2>Principles that guide everything we do</h2>
+  <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-top:48px;">
+    <div><h3 style="color:var(--red);margin-bottom:10px;">Rights-Based</h3><p style="font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.7;">We treat migrant workers as rights-holders, not beneficiaries. Every program is designed around their entitlements under existing law.</p></div>
+    <div><h3 style="color:var(--red);margin-bottom:10px;">Evidence-Driven</h3><p style="font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.7;">We generate and use evidence in everything we design. We share what we learn — including what hasn't worked.</p></div>
+    <div><h3 style="color:var(--red);margin-bottom:10px;">Systems-Oriented</h3><p style="font-size:0.88rem;color:rgba(255,255,255,0.5);line-height:1.7;">We are oriented toward solutions that can be adopted and scaled by governments, employers, and others — not just within our own programs.</p></div>
+  </div>
+</section>
+
+<script src="components.js"></script>
+<script>renderNav('work'); renderFooter();</script>
+</body>
+</html>

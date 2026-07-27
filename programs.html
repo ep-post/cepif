@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Programs — CEPI Foundation</title>
+<link rel="stylesheet" href="style.css">
+<style>
+.pillar-list { margin-top: 64px; }
+.pillar-row {
+  display: grid; grid-template-columns: 56px 1fr 72px;
+  gap: 0 40px; padding: 44px 0;
+  border-top: 1px solid var(--border);
+  align-items: center;
+  text-decoration: none; color: inherit;
+  transition: background 0.2s;
+}
+.pillar-row:last-child { border-bottom: 1px solid var(--border); }
+.pillar-row:hover { background: var(--white); margin: 0 -2vw; padding-left: 2vw; padding-right: 2vw; }
+.pillar-icon { font-size: 1.8rem; }
+.pillar-meta { }
+.pillar-meta h3 { font-family: 'Manrope',sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 8px; }
+.pillar-meta p { font-size: 0.88rem; color: var(--mid); line-height: 1.65; max-width: 640px; }
+.pillar-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 12px; }
+.pillar-arrow { color: var(--red); font-size: 1.2rem; text-align: right; }
+@media(max-width:768px){ .pillar-row{ grid-template-columns: 40px 1fr; } .pillar-arrow{display:none;} }
+</style>
+</head>
+<body>
+
+<div class="page-hero">
+  <div class="arc-bg" aria-hidden="true">
+    <svg viewBox="0 0 700 700" fill="none"><path d="M620 50 A320 320 0 1 0 620 650" stroke="white" stroke-width="2"/><path d="M580 90 A280 280 0 1 0 580 610" stroke="white" stroke-width="1.6"/><path d="M540 130 A240 240 0 1 0 540 570" stroke="white" stroke-width="1.2"/></svg>
+  </div>
+  <div class="section-label">Our Programs</div>
+  <h1>Six pillars.<br>One purpose.</h1>
+  <p class="hero-sub">Each pillar addresses a distinct dimension of the migrant experience — from safe movement and anti-trafficking to children's futures, skills, research, and systemic partnerships.</p>
+</div>
+
+<section>
+  <div class="section-label">Program Pillars</div>
+  <h2>Select a pillar to learn more</h2>
+  <div class="pillar-list fade-up">
+    <a href="p-migrant-workers.html" class="pillar-row">
+      <div class="pillar-icon">🧳</div>
+      <div class="pillar-meta">
+        <h3>Migrant Workers</h3>
+        <p>Direct support and system access for workers — safe migration facilitation, worker wellbeing, financial inclusion, and access to government entitlements.</p>
+        <div class="pillar-tags"><span class="tag tag-red">Safe Migration</span><span class="tag">Worker Wellbeing</span><span class="tag">Financial Inclusion</span><span class="tag">Access to Schemes</span></div>
+      </div>
+      <div class="pillar-arrow">→</div>
+    </a>
+    <a href="p-children.html" class="pillar-row">
+      <div class="pillar-icon">📚</div>
+      <div class="pillar-meta">
+        <h3>Children of Migrant Workers</h3>
+        <p>Ensuring a parent's migration does not interrupt a child's future — education continuity, learning support, child protection, and digital learning.</p>
+        <div class="pillar-tags"><span class="tag tag-red">Education Continuity</span><span class="tag">Learning Support</span><span class="tag">Child Protection</span><span class="tag">Digital Learning</span></div>
+      </div>
+      <div class="pillar-arrow">→</div>
+    </a>
+    <a href="p-skills.html" class="pillar-row">
+      <div class="pillar-icon">⚙️</div>
+      <div class="pillar-meta">
+        <h3>Skills &amp; Employability</h3>
+        <p>Creating structured pathways from informal to formal labour markets — workforce readiness, career development, and youth employment initiatives.</p>
+        <div class="pillar-tags"><span class="tag tag-red">Workforce Readiness</span><span class="tag">Career Pathways</span><span class="tag">Youth Employment</span></div>
+      </div>
+      <div class="pillar-arrow">→</div>
+    </a>
+    <a href="p-research.html" class="pillar-row">
+      <div class="pillar-icon">🔬</div>
+      <div class="pillar-meta">
+        <h3>Research &amp; Innovation</h3>
+        <p>Generating evidence, testing scalable models, and developing technology solutions to address gaps in migration governance and labour markets.</p>
+        <div class="pillar-tags"><span class="tag tag-red">Migration Studies</span><span class="tag">Labour Research</span><span class="tag">Technology Solutions</span></div>
+      </div>
+      <div class="pillar-arrow">→</div>
+    </a>
+    <a href="p-partnerships.html" class="pillar-row">
+      <div class="pillar-icon">🤝</div>
+      <div class="pillar-meta">
+        <h3>Partnerships &amp; Capacity Building</h3>
+        <p>Mobilising governments, employers, CSR partners, and civil society — and strengthening the organisations doing frontline work.</p>
+        <div class="pillar-tags"><span class="tag tag-red">CSR Engagement</span><span class="tag">NGO Strengthening</span><span class="tag">Government Collaboration</span></div>
+      </div>
+      <div class="pillar-arrow">→</div>
+    </a>
+    <a href="p-anti-trafficking.html" class="pillar-row">
+      <div class="pillar-icon">🔒</div>
+      <div class="pillar-meta">
+        <h3>Anti-Trafficking</h3>
+        <p>Addressing international labour trafficking through fraudulent overseas recruitment, and trafficking for forced criminality in cyber-scam compounds — both affecting workers from India's high-migration source states.</p>
+        <div class="pillar-tags"><span class="tag tag-red">Labour Trafficking</span><span class="tag">Forced Criminality</span><span class="tag">Scam Compounds</span><span class="tag">Survivor Support</span></div>
+      </div>
+      <div class="pillar-arrow">→</div>
+    </a>
+  </div>
+</section>
+
+<section class="dark-section">
+  <div class="section-label">Interested in Supporting a Pillar?</div>
+  <h2>Each pillar is a partnership opportunity.</h2>
+  <p class="section-intro">CSR funding, institutional grants, or technical collaboration — we welcome conversations at every stage.</p>
+  <a href="partner.html" class="btn-light" style="margin-top:32px;">Explore Partnership →</a>
+</section>
+
+<script src="components.js"></script>
+<script>renderNav('programs'); renderFooter();</script>
+</body>
+</html>
