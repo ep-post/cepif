@@ -31,13 +31,10 @@
 .reg-block p { font-family:'Manrope',sans-serif; font-size:0.95rem; font-weight:600; }
 
 /* IMPACT PHOTO STRIP */
-.impact-strip {
-  position:relative; overflow:hidden; padding:80px 5vw;
-  background-image:url('impact.jpg');
-  background-size:cover; background-position:center 40%;
+.impact-strip-plain {
+  background:var(--charcoal); padding:80px 5vw;
 }
-.impact-strip::before { content:''; position:absolute; inset:0; background:rgba(15,10,8,0.65); }
-.impact-inner { position:relative; z-index:2; display:flex; gap:0; flex-wrap:wrap; }
+.impact-inner { display:flex; gap:0; flex-wrap:wrap; }
 .impact-stat { flex:1; min-width:160px; padding:24px 40px 24px 0; border-right:1px solid rgba(255,255,255,0.12); margin-right:40px; }
 .impact-stat:last-child { border-right:none; margin-right:0; }
 .impact-stat .num { font-family:'Manrope',sans-serif; font-size:2.4rem; font-weight:800; color:var(--white); letter-spacing:-0.03em; }
@@ -76,7 +73,7 @@
 </section>
 
 <!-- VISION / MISSION — photo background (community circle Assam) -->
-<section class="photo-section" style="background-image:url('vision.jpg')">
+<section class="photo-section" style="background-image:url('children.jpg')">
   <div class="section-label" style="color:rgba(255,255,255,0.3)">Who We Are</div>
   <h2 style="color:var(--white);max-width:580px;">Movement should never mean <span style="color:var(--red)">exclusion.</span></h2>
   <div class="vm-grid fade-up">
@@ -138,7 +135,7 @@
 </section>
 
 <!-- OUR WORK — photo background (large group session) -->
-<section class="photo-section" style="background-image:url('work.jpg')">
+<section class="dark-section">
   <div class="section-label" style="color:rgba(255,255,255,0.3)">Our Areas of Work</div>
   <h2 style="color:var(--white)">Where we focus.</h2>
   <div style="margin-top:48px;max-width:700px;" class="fade-up">
@@ -174,7 +171,7 @@
 </section>
 
 <!-- IMPACT STATS STRIP — photo background -->
-<div class="impact-strip">
+<div class="impact-strip-plain">
   <div class="impact-inner fade-up">
     <div class="impact-stat"><div class="num">6<span>+</span></div><div class="lbl">Program Pillars</div></div>
     <div class="impact-stat"><div class="num">4</div><div class="lbl">States of Operation</div></div>
@@ -196,7 +193,7 @@
 </section>
 
 <!-- PARTNER CTA — photo background (girls with banner, river) -->
-<section class="photo-section" style="background-image:url('partner.jpg')">
+<section class="photo-section" style="background-image:url('impact.jpg')">
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;" class="fade-up">
     <div>
       <div class="section-label" style="color:rgba(255,255,255,0.3)">Get Involved</div>
